@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.MoveShield.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MoveShield.AppWidgetContainer">
+
+    <ImageButton
+        android:id="@+id/image_button_lockscreen"
+        android:layout_width="124dp"
+        android:layout_height="127dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="271dp"
+        android:layout_marginBottom="588dp"
+        android:backgroundTint="#E12222"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_test" />
+</RelativeLayout>

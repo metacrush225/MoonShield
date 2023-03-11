@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="-1dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="11dp">
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="201dp"
+            android:layout_height="50dp"
+            android:text="Activer service"
+            android:textColor="@color/teal_200"
+            android:thumbTint="#FF0000"
+            android:trackTint="#F44336" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Autorisation SMS"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/checkBoxLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Autorisation Géolocalisation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxSms" />
+
+        <CheckBox
+            android:id="@+id/checkBoxContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Autorisation Contacts"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxLocation" />
+
+        <Button
+            android:id="@+id/button_list_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#03F4A0"
+            android:text="Accès contacts"
+            app:iconTint="#3F51B5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxContacts" />
+
+        <Button
+            android:id="@+id/button_custom_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Message custom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_list_contacts" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
