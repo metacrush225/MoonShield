@@ -2,7 +2,10 @@ package com.example.moveshield.Helpers
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
+import com.example.moveshield.Modeles.Contact
 
 class ContactDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -23,6 +26,6 @@ class ContactDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABA
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        // handle upgrades here
+        TODO("Not yet implemented")
     }
 }

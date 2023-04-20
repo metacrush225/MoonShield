@@ -6,7 +6,9 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import android.util.Log
 import android.view.KeyEvent
+import android.widget.Toast
 import com.example.moveshield.MainActivity
 import com.facebook.react.*
 import com.facebook.react.BuildConfig
@@ -20,6 +22,7 @@ class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Toast.makeText(this, "Wow", Toast.LENGTH_LONG)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if(!Settings.canDrawOverlays(this)) {
@@ -47,6 +50,10 @@ class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
             .build()
         // The string here (e.g. "MyReactNativeApp") has to match
         // the string in AppRegistry.registerComponent() in index.js
+
+        Toast.makeText(this, "INITIATE", Toast.LENGTH_LONG)
+        Log.d("INIT", "Initiating shit")
+
         reactRootView?.startReactApplication(reactInstanceManager, "MyReactNativeApp", null)
         setContentView(reactRootView)
     }
@@ -57,6 +64,10 @@ class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 if (!Settings.canDrawOverlays(this)) {
                     // SYSTEM_ALERT_WINDOW permission not granted
+                    Toast.makeText(this, "SYSTEM_ALERT_WINDOW permission not granted", Toast.LENGTH_LONG)
+                } else {
+                    Toast.makeText(this, "SYSTEM_ALERT_WINDOW permission granted", Toast.LENGTH_LONG)
+
                 }
             }
         }

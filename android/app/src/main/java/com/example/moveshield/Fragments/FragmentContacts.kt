@@ -112,7 +112,7 @@ class FragmentContacts : Fragment() {
                 var phone = ""
 
                 val _idIndex = cursor.getColumnIndex("_id")
-                if(_idIndex > 0)
+                if(_idIndex > -1)
                     _id = cursor.getString(_idIndex)
 
                 val nameIndex = cursor.getColumnIndex("name")

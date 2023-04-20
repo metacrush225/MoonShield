@@ -42,12 +42,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="54dp"
-            android:layout_height="41dp"
+            android:id="@+id/imageButtonCorbeille"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:backgroundTint="#D51A1A"
-            android:src="@drawable/delete_small"
+            android:src="@drawable/delete"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

@@ -9,6 +9,8 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import android.util.Log
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -49,6 +51,19 @@ class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.d("INIT", "Initiating Main shit")
+
+
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if(!Settings.canDrawOverlays(this)) {
+                Toast.makeText(this, "OVERLAY PERMISSION CANNOT DRAWOVERLAYS", Toast.LENGTH_LONG)
+
+                val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    Uri.parse("package: $packageName"))
+                startActivityForResult(intent, MainActivity.PermissionRequestCodes.OVERLAY_PERMISSION_REQ_CODE);
+            }
+        }*/
+
 
 
         fragmentPrincipal = FragmentPrincipal()
@@ -66,23 +81,6 @@ class MainActivity : FragmentActivity() {
 
     override fun onResume() {
         super.onResume()
-
-        // check if the fragment already exists
-
-        /*if (fragmentPrincipal == null) {
-            // create a new instance of the fragment and add it to the activity
-            supportFragmentManager.beginTransaction()
-                .add(R.id.fragment_container, fragmentPrincipal)
-                .commit()
-        }
-
-
-        if (fragmentContact == null) {
-            // create a new instance of the fragment and add it to the activity
-            supportFragmentManager.beginTransaction()
-                .add(R.id.fragment_container, fragmentContact)
-                .commit()
-        }*/
 
         requestSmsPermission()
         requestLocationPermission()
